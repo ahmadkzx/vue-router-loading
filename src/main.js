@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
+import VueRouterLoadingComponent from './VueRouterLoading.vue'
 
-Vue.config.productionTip = false
+const VueRouterLoading = {
+  install: (Vue, options) => {
+    Vue.component('VueRouterLoading', VueRouterLoadingComponent)
+  }
+}
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export default VueRouterLoading

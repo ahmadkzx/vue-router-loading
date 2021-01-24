@@ -1,11 +1,17 @@
 {
   "name": "vue-router-loading",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+  "version": "0.0.11",
+	"private": false,
+	"author": "Ahmad Karimzade",
+	"description": "Vue Router Loading Progress Bar",
+	"homepage": "https://github.com/ahmadkzx/vue-router-loading#readme",
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadkzx/vue-router-loading.git"
   },
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
