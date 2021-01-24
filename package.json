@@ -6,7 +6,7 @@
 	"description": "Vue Router Loading Progress Bar",
 	"homepage": "https://github.com/ahmadkzx/vue-router-loading#readme",
 	"scripts": {
-    "build": "vue-cli-service build --target lib --name vue-router-loading ./src/index.js"
+    "build": "vue-cli-service build --target lib --name vue-router-loading ./src/main.js"
   },
 	"repository": {
     "type": "git",
