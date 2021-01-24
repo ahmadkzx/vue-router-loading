@@ -5,6 +5,9 @@
 	"author": "Ahmad Karimzade",
 	"description": "Vue Router Loading Progress Bar",
 	"homepage": "https://github.com/ahmadkzx/vue-router-loading#readme",
+	"scripts": {
+    "build": "vue-cli-service build --target lib --name vue-router-loading ./src/index.js"
+  },
 	"repository": {
     "type": "git",
     "url": "git+https://github.com/ahmadkzx/vue-router-loading.git"
