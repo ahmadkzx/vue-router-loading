@@ -15,7 +15,12 @@
   },
   "files": [
     "dist/*"
+	],
+	"keywords": [
+    "vue",
+    "vue-router"
   ],
+
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
