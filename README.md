@@ -1,19 +1,49 @@
-# vue-router-loading
+# Vue Router Loading
+Easy to use, highly customizable Vue Router Loading.
 
-## Project setup
-```
-npm install
-```
+### Getting started
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+ 1. Install the package:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+    npm install vue-router-loading
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 2. Import component in App.vue:
+ 
+    import VueRouterLoading from 'vue-router-loading'
+
+ 3. Put Component: in template
+
+### Customize
+You can custom loading bar with props.
+
+ 
+
+ - color: 
+ progress bar color
+ default: #41b883
+ 
+ - height:
+ default: 2px
+ 
+ - position:
+default: top
+options: top, bottom
+
+- rtl:
+default: false
+
+- endLineMode: 
+default: 'shadow'
+options: shadow, circle
+
+- shadowColor:
+default: #41b883
+
+- shadowOpacity:
+default: 0.9
+
+- circleColor: 
+default: #41b883
+
+- showOverly:
+default: true
