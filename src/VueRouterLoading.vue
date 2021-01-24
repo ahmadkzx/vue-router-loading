@@ -28,7 +28,7 @@ export default {
       default: 'top'
     },
     rtl: {
-      default: true
+      default: false
     },
     endLineMode: {
       default: 'shadow'
