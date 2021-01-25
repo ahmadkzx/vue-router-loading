@@ -1,7 +1,7 @@
 
 # Vue Router Loading
 
-Easy to use, highly customizable Vue Router Loading.
+Easy to use and highly customizable Vue Router Loading.
 
 ### Getting started  
 
