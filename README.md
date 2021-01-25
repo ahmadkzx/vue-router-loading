@@ -31,14 +31,14 @@ default: #41b883
 default: 2px
 
 ⚙ position:  
-default: top
+default: top  
 options: top, bottom
 
 ⚙ rtl:  
 default: false
 
 ⚙ endLineMode:  
-default: shadow
+default: shadow  
 options: shadow, circle
 
 ⚙ shadowColor:  
