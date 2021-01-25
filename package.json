@@ -1,6 +1,6 @@
 {
   "name": "vue-router-loading",
-  "version": "1.1.14",
+  "version": "1.1.15",
 	"private": false,
 	"author": "Ahmad Karimzade",
 	"description": "Vue Router Loading Progress Bar",
