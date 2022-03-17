@@ -2,9 +2,9 @@
   <div>
     <transition name="fade">
       <div
-        v-if="started"
+        v-if="isStarted"
         :style="progressBarStyle"
-        :class="['progressbar', { 'paused': paused }, { 'finished': finished }, { 'rtl': rtl }, { 'showOverly': showOverly }]"
+        :class="['progressbar', { 'isPaused': isPaused }, { 'isFinished': isFinished }, { 'rtl': rtl }, { 'showOverly': showOverly }]"
       >
         <span class="shadow" v-if="endLineMode == 'shadow'" :style="shadowStyle"></span>
         <span class="circle" v-else-if="endLineMode == 'circle'" :style="circleStyle"></span>
@@ -48,9 +48,9 @@ export default {
   },
 
   data: () => ({
-    started: false,
-    paused: false,
-    finished: false,
+    isPaused: false,
+    isStarted: false,
+    isFinished: false
   }),
 
   computed: {
@@ -61,12 +61,14 @@ export default {
         height: `${this.height}px`,
       }
     },
+
     shadowStyle() {
       let shadowColor = (this.isHex(this.shadowColor)) ?  this.hexToRgb(this.shadowColor) : this.shadowColor
       return {
         'box-shadow': `0 0 10px rgba(${shadowColor}, ${this.shadowOpacity})`
       }
     },
+
     circleStyle() {
       return {
         background: this.circleColor,
@@ -84,22 +86,23 @@ export default {
   },
 
   methods: {
-
     start() {
-      if (this.started) this.destroy();
-      this.started = true
-      setTimeout(() => { if (this.started && !this.finished) this.paused = true }, 8500)
+      if (this.isStarted) this.destroy();
+      this.isStarted = true
+      setTimeout(() => {
+        if (this.isStarted && !this.isFinished) this.isPaused = true
+      }, 8500)
     },
 
     finish() {
-      this.finished = true
-      this.paused = false
+      this.isFinished = true
+      this.isPaused = false
     },
 
     destroy() {
-      this.started = false
-      this.finished = false
-      this.paused = false
+      this.isStarted = false
+      this.isFinished = false
+      this.isPaused = false
     },
 
     hexToRgb(hex) {
@@ -110,18 +113,17 @@ export default {
     isHex(str) {
       return str.match(/^#[a-f0-9]{6}$/i) !== null;
     }
-
   },
 
   watch: {
-    started(val) {
+    isStarted(val) {
       if (val) setTimeout(() => {
         this.$el.addEventListener("animationend", this.destroy);
       }, 500)
     },
 
     $route() {
-      setTimeout(() => { this.finish() }, 500)
+      setTimeout(() => this.finish(), 500)
     }
   }
 
